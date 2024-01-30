@@ -1,0 +1,110 @@
+﻿@model IEnumerable<Models.Request.AuthorApi>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dev Test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        body {
+            padding-top: 5rem;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="padding:10pt">
+        <a class="navbar-brand" href="#">DS - DevTest</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Author")">Authors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Book")">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "AuthorApi")">AuthorsApi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "BookApi")">BooksApi</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main">
+        <div class="py-5">
+            <h2>New Author</h2>
+            <form action="/AuthorApi/Create" method="post" class="needs-validation" novalidate="">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="FirstName" placeholder="" required="">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="LastName" placeholder="" required="">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="Email" placeholder="you@example.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone">Phone</label>
+                    <input type="tel" class="form-control" id="phone" name="Phone" placeholder="123-456-7890">
+                </div>
+
+                <div class="mb-3">
+                    <label for="address1">Address 1</label>
+                    <input type="text" class="form-control" id="address1" name="Address1" placeholder="1234 Main St" required="">
+                </div>
+
+                <div class="mb-3">
+                    <label for="address2">Address 2</label>
+                    <input type="text" class="form-control" id="address2" name="Address2" placeholder="Apartment or suite">
+                </div>
+
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="country">Country</label>
+                        <input type="text" class="form-control" id="country" name="Country" placeholder="Country" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" name="City" placeholder="City" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="state">State</label>
+                        <input type="text" class="form-control" id="state" name="State" placeholder="State" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="zip">Zip</label>
+                        <input type="text" class="form-control" id="zip" name="Zip" placeholder="Zip code" required="">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn-primary" type="submit">Create Author</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
