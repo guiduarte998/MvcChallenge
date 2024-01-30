@@ -46,9 +46,9 @@ public class AuthorApiController : Controller
         var content = new StringContent(json, Encoding.UTF8, "application/json");
 
         var request = new HttpRequestMessage(HttpMethod.Post, $"https://devtestapi.debtstream.co.uk/Author/Add")
-            {
-        Content = content
-    };
+        {
+            Content = content
+        };
         request.Headers.Add("API-Key", "1234567890");
 
         HttpResponseMessage response = await _httpClient.SendAsync(request);
@@ -105,7 +105,7 @@ public class AuthorApiController : Controller
         var json = JsonConvert.SerializeObject(author);
         var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-        var request = new HttpRequestMessage(HttpMethod.Get, $"https://devtestapi.debtstream.co.uk/Author/Edit/{id}")
+        var request = new HttpRequestMessage(HttpMethod.Post, $"https://devtestapi.debtstream.co.uk/Author/Edit/{id}")
         {
             Content = content
         };
